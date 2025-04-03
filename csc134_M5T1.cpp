@@ -1,15 +1,37 @@
 // CSC 134
-// M4T1
+// M5T1
 // Sebastian Camacho
-// 03/23/2025
+// 04/03/2025
 
 #include <iostream>
 using namespace std;
+void say_hello();
+int give_the_answer();
+int double_a_number(int num);
 
 int main() 
 {
-    
-    
-    return 0;
+    cout << "Hello from main()" << endl;
+    say_hello();
+    int my_answer = give_the_answer();
+    cout << "The answer is: " << my_answer << endl;
 
+    int twotimes = double_a_number(7);
+    cout << "Here's another number: " << twotimes << endl;
+
+    return 0;
+}
+void say_hello() 
+{
+    cout << "Hi from say hello() " << endl;
+    return;
+}
+int give_the_answer()
+{
+    return 42;
+}
+int double_a_number(int num)
+{
+    int new_num = num * 2;
+    return new_num;
 }
