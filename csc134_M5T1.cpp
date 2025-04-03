@@ -5,33 +5,27 @@
 
 #include <iostream>
 using namespace std;
-void say_hello();
-int give_the_answer();
-int double_a_number(int num);
+string formatAnswer(int answer);
+void printAnswer(string msg);
 
 int main() 
 {
-    cout << "Hello from main()" << endl;
-    say_hello();
-    int my_answer = give_the_answer();
-    cout << "The answer is: " << my_answer << endl;
+   int answer = 5;
+   string message;
+   message = formatAnswer(answer);
+   printAnswer(message);
 
-    int twotimes = double_a_number(7);
-    cout << "Here's another number: " << twotimes << endl;
+   return 0;
+}
+string formatAnswer (int answer)
+{
+    string answerMessage;
+    answerMessage = "The answer is ";
+    answerMessage += to_string(answer);
 
-    return 0;
+    return answerMessage;
 }
-void say_hello() 
+void printAnswer(string msg)
 {
-    cout << "Hi from say hello() " << endl;
-    return;
-}
-int give_the_answer()
-{
-    return 42;
-}
-int double_a_number(int num)
-{
-    int new_num = num * 2;
-    return new_num;
+    cout << msg << endl;
 }
